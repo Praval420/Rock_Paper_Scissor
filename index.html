@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rock.css">
+    <script src="rock.js"></script>
+    <title>Document</title>
+</head>
+<body>
+            <div class="mainmain">
+                <h1>Rock Paper Scissor Game</h1>
+                <div class="main">
+                    <button class="css-button" onclick="comMove=move();
+                    imgDisplay('rock',comMove);
+                    let b=computerMove('Rock',comMove);
+                    displayResult(b);
+                    displayScore();">
+                    <img src="rock.jpg" alt=""></button>
+                    <button class="css-button" onclick="comMove=move();
+                    imgDisplay('Paper',comMove);
+                    let c=computerMove('Paper',comMove);
+                    displayResult(c);
+                    displayScore();"><img src="Paper.jpg" alt=""></button>
+                    <button class="css-button" onclick="comMove=move();
+                    imgDisplay('Scissor',comMove);
+                    let d=computerMove('Scissor',comMove);
+                    displayResult(d);
+                    displayScore();"><img src="Scissor.jpg" alt=""></button>
+                </div>
+                <div>
+                <p class="result"></p>
+                <p class="js-moves"></p>
+                </div>
+                <div class="reset-button">
+                    <button class="reset" onclick="score={win:0,loses:0,tie:0};
+                        localStorage.removeItem('score'); //it removes the current storage 
+                        document.querySelector('.js-moves').innerHTML='';
+                        displayScore();">RESET</button>
+                </div>
+                <p class="js-para"></p>
+            </div>
+</body>
+</html>
